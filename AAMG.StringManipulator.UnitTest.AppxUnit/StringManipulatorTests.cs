@@ -13,29 +13,27 @@ namespace AAMG.StringManipulator.UnitTest.AppxUnit
         {
             // Arrange
             string input = "Hello, World!";
-            string expected = "!dlroW ,olleH";
             var manipulator = new StringManipulator();
 
             // Act
             string result = manipulator.ReverseString(input);
 
             // Assert
-            Assert.Equal(expected, result);
+            Assert.Equal("!dlroW ,olleH", result);
         }
 
         [Fact]
         public void RemoveSpaces_ShouldRemoveSpaces()
         {
             // Arrange
-            string input = "Hello, World!";
-            string expected = "Hello,World!";
+            string input = "He llo, Wor ld!";
             var manipulator = new StringManipulator();
 
             // Act
             string result = manipulator.RemoveSpaces(input);
 
             // Assert
-            Assert.Equal(expected, result);
+            Assert.Equal("Hello,World!", result);
         }
     }
 }
